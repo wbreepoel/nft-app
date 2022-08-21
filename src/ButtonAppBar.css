@@ -1,0 +1,15 @@
+.nav-bar-container {
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.nav-search-bar {
+    width:100%;
+    display:flex;
+    padding: 5px 0px;
+}
+
+.responsive-search-bar {
+    display:none;
+}
