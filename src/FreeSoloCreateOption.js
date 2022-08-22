@@ -2,16 +2,14 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import { borderLeft } from '@mui/system';
+import OpenSeaApi from "./apis/OpenSeaApi"
+import {useEffect, useState} from "react"
 
 const filter = createFilterOptions();
 
-export default function FreeSoloCreateOption(props) {
+export default function FreeSoloCreateOption({onSubmit}) {
+  console.log("TYPE OFFF  " + onSubmit)
   const [value, setValue] = React.useState(null);
-
-  const onFormSubmit = event => {
-    //event.preventDefault();
-    props.onSubmitSearch(event) 
-}
   
 // if (value) {
 //   console.log(value.api)
@@ -21,7 +19,6 @@ export default function FreeSoloCreateOption(props) {
 
   return (
     <Autocomplete
-      onKeyDown={onFormSubmit}
       value={value}
       onChange={(event, newValue) => {
         if (typeof newValue === 'string') {
@@ -76,7 +73,11 @@ export default function FreeSoloCreateOption(props) {
         <TextField {...params} label="Search for a collection.." />
       )}
     />
+
+
+    
   );
+
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top

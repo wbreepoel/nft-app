@@ -8,12 +8,19 @@ import './LandingPage.css'
 import './ButtonAppBar.css'
 import NftData from './NftData';
 import LandingPage from './LandingPage';
+import SearchBar from "./SearchBar"
+import useNfts from './hooks/useNfts';
+import NftSearchItem from './NftSearchItem';
 
 const App = () => {
 
+  const [nftCollection, search] = useNfts("")
+
   return (
     <div className="App">
+      <SearchBar onSubmit={search}/>
       <LandingPage/>
+      <NftSearchItem nft={nftCollection}/>
       <NftData/>
     </div>
   );
