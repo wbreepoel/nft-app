@@ -2,14 +2,15 @@ import React, {useState} from "react"
 import FaceTwoToneIcon from '@mui/icons-material/FaceTwoTone';
 import AccountBalanceWalletTwoToneIcon from '@mui/icons-material/AccountBalanceWalletTwoTone';
 import ButtonAppBar from "./ButtonAppBar";
+import SearchBox from "./SearchBox";
 
 const SearchBar = ({onSubmit}) => {
-    const [term, setTerm] = useState('')
-    console.log('TYPEOF SEARCHBAR ' + typeof(onSubmit))
-    const onFormSubmit = event => {
-        event.preventDefault();
-        onSubmit(term) 
-    }
+    // const [term, setTerm] = useState('')
+    // console.log('TYPEOF SEARCHBAR ' + typeof(onSubmit))
+    // const onFormSubmit = event => {
+    //     event.preventDefault();
+    //     onSubmit(term) 
+    // }
 
 
     return (
@@ -22,16 +23,17 @@ const SearchBar = ({onSubmit}) => {
         //     </form>
         // </div>
         <div>
-            <ButtonAppBar/> 
+            <ButtonAppBar onSubmit={onSubmit}/> 
             <div className='navigation'>
                 <div className="logo">LOGO</div>
-                <div className='search-box'>
-                <form onSubmit={onFormSubmit} className="ui form">
-                <div className="field">
-                    <input type="text" value={term} onChange={event => setTerm(event.target.value)}></input>
-                </div>
-            </form>
-                </div>
+                    {/* <div className='search-box'>
+                        <form onSubmit={onFormSubmit} className="ui form">
+                            <div className="field">
+                                <input type="text" value={term} onChange={event => setTerm(event.target.value)}></input>
+                            </div>
+                        </form>
+                    </div> */}
+                    <SearchBox onSubmit={onSubmit} />
                 <div className='nav-menu'>
                     <ul>
                         <li>Explore</li>

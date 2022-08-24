@@ -10,13 +10,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
-import FreeSoloCreateOption from './FreeSoloCreateOption';
+import SearchBox from './SearchBox';
 
 import {useRef} from 'react'
 
-export default function ButtonAppBar() {
-  const navRef = useRef();
-  const navRefTwo = useRef();
+export default function ButtonAppBar({onSubmit}) {
+  const navRef = useRef(null);
+  const navRefTwo = useRef(null);
 
   const showNavBar = () => {
     navRefTwo.current.classList.toggle('responsive-search-bar')
@@ -50,7 +50,7 @@ export default function ButtonAppBar() {
             </div>
             <div className='responsive-search-bar nav-search-bar' ref={navRef}>
               <Button color="inherit" onClick={showNavBar}> <ChevronLeftIcon/> </Button>
-              <FreeSoloCreateOption  />
+              <SearchBox onSubmit={onSubmit} />
             </div>
             
           </Toolbar>
