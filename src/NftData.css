@@ -1,6 +1,7 @@
 .outer-container {
   min-width:100%;
   display:flex;
+  justify-content: center;
   flex-wrap:wrap;
 }
 
@@ -9,6 +10,11 @@
   box-sizing: border-box;
   box-shadow: rgb(0 0 0 / 8%) 0px 4px 15px;
   border-radius:10px;
+}
+
+.nft-asset-box > a {
+  text-decoration:none;
+  color:black;
 }
 
 .featured-img-container {

@@ -24,8 +24,6 @@ export default function ButtonAppBar({onSubmit}) {
     
   }
 
-  
-
   return (
     <div>
 

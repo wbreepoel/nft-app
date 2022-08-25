@@ -13,7 +13,8 @@ function SearchBox ({onSubmit}) {
         <div className='search-box'>
             <form onSubmit={onFormSubmit} className="ui form">
                 <div className="field">
-                    <input type="text" value={term} onChange={event => setTerm(event.target.value)}></input>
+                    <input type="text" value={term} onChange={event => setTerm(event.target.value)}
+                    placeholder='Search for a collection...'></input>
                 </div>
             </form>
         </div>

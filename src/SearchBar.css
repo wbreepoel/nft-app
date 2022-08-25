@@ -7,14 +7,20 @@
 
 }
 
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-    font-weight: bold;
-}
-
 .nav-icons svg {
     display:none;
 }
 
+.search-box {
+    width: 75%;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
 
 @media only screen and (min-width: 1130px) {
     .MuiBox-root.css-i9gxme {
@@ -24,7 +30,7 @@
     .navigation {
         display:flex;
         width:100%;
-        padding-top: 10px;
+        padding: 10px;
     }
     
     .navigation ul {
@@ -45,19 +51,20 @@
     }
     
     .search-box {
-        width:50%;
-        display:flex;
-        justify-content: right;
+        width:75%;
+        height: 28px;
+        padding-bottom: 15px;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #f1f1f1;
     }
     
-    .nav-menu {
-        display:block;
-        width: 33%;
-        margin:auto;
-    }
     
     .nav-icons {
-        width:7%;
+        width:15%;
         display:flex;
         justify-content: center;
         align-items: center;

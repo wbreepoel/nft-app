@@ -4,13 +4,14 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import './NftData.css'
-import './LandingPage.css'
+import './SearchBar.css'
 import './ButtonAppBar.css'
-import NftData from './NftData';
-import LandingPage from './LandingPage';
-import SearchBar from "./SearchBar"
+import './NftSearchItem.css'
+
+import NftData from './components/NftData';
+import SearchBar from "./components/SearchBar"
 import useNfts from './hooks/useNfts';
-import NftSearchItem from './NftSearchItem';
+import NftSearchItem from './components/NftSearchItem';
 
 const App = () => {
 
@@ -19,7 +20,6 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar onSubmit={search}/>
-      <LandingPage/>
       <NftSearchItem nft={nftCollection}/>
       <NftData/>
     </div>
